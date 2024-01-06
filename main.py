@@ -10,11 +10,17 @@ display = []
 for i in range(len(word_to_guess)):
     display.append("_")
 
-guess = input("Guess a letter: ").lower()
+game_over = False
 
-for position in range(len(word_to_guess)):
-    letter = word_to_guess[position]
-    if letter == guess:
-        display[position] = letter
+while not game_over:
+    guess = input("Guess a letter: ").lower()
 
-print(display)
+    for position in range(len(word_to_guess)):
+        letter = word_to_guess[position]
+        if letter == guess:
+            display[position] = letter
+    if "_" not in display:
+        game_over = True
+
+    print(display)
+
