@@ -30,7 +30,7 @@ while not game_over:
             display[position] = letter
     if guess not in word_to_guess:
         lives -= 1
-        print("You lose a life")
+        print("You lose a life.")
         if lives == 0:
             game_over = True
             print("You lose.")
