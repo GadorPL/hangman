@@ -10,15 +10,11 @@ display = []
 for i in range(len(word_to_guess)):
     display.append("_")
 
-letter = input("Guess a letter: ").lower()
+guess = input("Guess a letter: ").lower()
 
-index = -1
-for i in word_to_guess:
-    index += 1
-    if letter == i:
-        print("Right")
-        display[index] = letter
-    else:
-        print("Wrong")
+for position in range(len(word_to_guess)):
+    letter = word_to_guess[position]
+    if letter == guess:
+        display[position] = letter
 
 print(display)
